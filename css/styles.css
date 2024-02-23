@@ -1,0 +1,140 @@
+@font-face{
+    font-family: 'Figtree';
+    src: url('assets/fonts/static/Figtree-ExtraBold.ttf') format('ttf'),
+    url('assets/fonts/static/Figtree-SemiBold.ttf') format('ttf'),
+    url('assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('ttf'),
+    url('assets/fonts/Figtree-VariableFont_wght.ttf') format('ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: hsl(47, 88%, 63%);
+    --white:hsl(0, 0%, 100%);
+    --grey:hsl(0, 0%, 50%);
+    --black:hsl(0, 0%, 7%);
+    --weight__Normal:500;
+    --weight__titulo:800;
+}   
+
+body{
+    font-family: Figtree;
+    font-size: 16px;
+    background-color: var(--primary-color);
+}
+
+
+.card{
+    max-width: 375px;
+    min-width: 350px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border-radius: 20px;
+    background-color: var(--white);
+    border: 1px solid black;
+    box-shadow: 10px 12px 0 rgba(0,0,0,255);
+}
+
+.card__img{
+    width: 100%;
+    height: 50%;
+    padding: 15px 20px 10px 20px;
+    margin-left: .7rem;
+}
+
+.card__img img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card__name{
+    margin-left: 1.9rem;
+    margin-bottom: 1.1rem;
+    font-weight: var(--weight__titulo);
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card__date{
+    margin-left: 1.9rem;
+    font-weight: var(--weight__Normal);
+}
+
+.card__foundations{
+    text-align: start;
+    margin-left: 1.9rem;
+    margin-top: .5rem;
+    font-weight: var(--weight__titulo);
+}
+
+.card__p{
+    text-align: justify;
+    width: 80%;
+    margin-left: 1.9rem;
+    margin-top: .5rem;
+}
+
+.card__author__img{
+    background-image: url(../assets/images/image-avatar.webp);
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+    margin-top: .7rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card__author__name{
+    display: inline-block;
+    margin-left: .7rem;
+    position: relative;
+    top: -.7rem;
+}
+
+.attribution{
+    width: inherit;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.author__code{
+    font-weight: var(--weight__titulo);
+    background-color: #13e4d7;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    box-shadow: 5px 5px 2px rgba(0,0,0,255);
+}
+
+@media(min-width:376px){
+    .card{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card__author__name{
+        position: relative;
+        top: -1.8rem;
+        left: 4rem;
+    }
+}
